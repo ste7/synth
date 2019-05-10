@@ -1,0 +1,23 @@
+<p>
+  oscillator works!
+</p>
+<!-- <div id="osc_type"></div> -->
+
+<div class="control">
+  <label class="radio">
+    <input type="radio" name="type" value="sine" [(ngModel)]="type" (ngModelChange)="oscTypeChanged($event)" checked>
+    Sine
+  </label><br />
+  <label class="radio">
+    <input type="radio" name="type" value="square" [(ngModel)]="type" (ngModelChange)="oscTypeChanged($event)">
+    Square
+  </label><br />
+  <label class="radio">
+    <input type="radio" name="type" value="sawtooth" [(ngModel)]="type" (ngModelChange)="oscTypeChanged($event)">
+    Sawtooth
+  </label><br />
+  <label class="radio">
+    <input type="radio" name="type" value="triangle" [(ngModel)]="type" (ngModelChange)="oscTypeChanged($event)">
+    Triangle
+  </label><br />
+</div>

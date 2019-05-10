@@ -20,8 +20,14 @@
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
+    "@ngxs/devtools-plugin": "^3.4.3-dev.master-22f6d64",
+    "@ngxs/logger-plugin": "^3.4.3-dev.master-22f6d64",
+    "@ngxs/store": "^3.4.3-dev.master-22f6d64",
+    "bulma": "^0.7.4",
     "core-js": "^2.5.4",
-    "rxjs": "^6.0.0",
+    "nexusui": "^2.0.10",
+    "rxjs": "6.0.0",
+    "tone": "^13.4.9",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
