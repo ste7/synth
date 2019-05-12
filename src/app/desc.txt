@@ -1,0 +1,6 @@
+oscillator
+-on/off
+-type
+-frequency
+-volume
+

@@ -19,7 +19,7 @@ describe('OscillatorComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should createaaa', () => {
     expect(component).toBeTruthy();
   });
 });
