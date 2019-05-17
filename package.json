@@ -25,6 +25,7 @@
     "@ngxs/store": "^3.4.3",
     "ajv-keywords": "^3.4.0",
     "bulma": "^0.7.4",
+    "bulma-extensions": "^6.2.5",
     "core-js": "^2.5.4",
     "nexusui": "^2.0.10",
     "rxjs": "6.0.0",

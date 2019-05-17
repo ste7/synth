@@ -4,3 +4,26 @@ oscillator
 -frequency
 -volume
 
+AddOscillator
+    -on = true
+    -type = '...'
+    -...
+
+UpdateOscillator
+    -type = '...'
+    -frequency = '...'
+    -...
+
+RemoveOscillator
+    -on = false
+
+
+
+
+
+
+pitch
+piano
+env
+filter
+distorsion

@@ -15,13 +15,19 @@ import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { CreateComponent } from './create/create.component';
 import { ReadComponent } from './read/read.component';
+import { DelayComponent } from './effects/delay/delay.component';
+import { SynthComponent } from './synth/synth.component';
+import { ChorusComponent } from './effects/chorus/chorus.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OscillatorComponent,
     CreateComponent,
-    ReadComponent
+    ReadComponent,
+    DelayComponent,
+    SynthComponent,
+    ChorusComponent
   ],
   imports: [
     BrowserModule,

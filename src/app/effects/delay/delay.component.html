@@ -1,0 +1,5 @@
+<div class="delay_wrap">                  
+    <input class="slider" step="0.1" min="0" max="1" value="0" type="range" orient="vertical" [(ngModel)]="delayTime" (ngModelChange)="delayTimeChanged($event)" />
+    <input class="slider" step="0.1" min="0" max="0.95" value="0" type="range" orient="vertical" [(ngModel)]="delayFeedback" (ngModelChange)="delayFeedbackChanged($event)" />
+    <input class="slider" step="0.1" min="0" max="1" value="0" type="range" orient="vertical" [(ngModel)]="delayWet" (ngModelChange)="delayWetChanged($event)" />
+</div>

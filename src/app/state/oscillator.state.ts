@@ -5,37 +5,31 @@ import { AddOscillator, RemoveOscillator } from './../actions/oscillator.actions
 
 // Section 2
 export class OscillatorStateModel {
-  on: boolean;
-  type: string;
-  frequency: number;
-  volume: number;
+  oscillators: Oscillator[]
 }
 
 // Section 3
 @State<OscillatorStateModel>({
-  name: 'oscillator',
+  name: 'oscillators',
   defaults: {
-    on: false,
-    type: 'sine',
-    frequency: 1,
-    volume: 1
+    oscillators: []
   }
 })
 
 export class OscillatorState {
   @Selector()
   static getOscillator(state: OscillatorStateModel) {
-    return state.on;
+    return state.oscillators;
   }
 
   // Section 5
-  // @Action(AddOscillator)
-  // add({getState, patchState }: StateContext<OscillatorStateModel>, { payload }:AddOscillator) {
-  //   const state = getState();
-  //   patchState({
-  //     oscillator: [...state.on, payload]
-  //   })
-  // }
+  @Action(AddOscillator)
+  add({getState, patchState }: StateContext<OscillatorStateModel>, { payload }:AddOscillator) {
+    const state = getState();
+    patchState({
+      oscillators: [...state.oscillators, payload]
+    })
+  }
 
   // @Action(RemoveOscillator)
   // remove({getState, patchState }: StateContext<OscillatorStateModel>, { payload }:RemoveOscillator) {

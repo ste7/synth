@@ -1,0 +1,5 @@
+<div class="delay_wrap">                  
+  <input class="slider" step="0.1" min="0" max="3" value="0" type="range" orient="vertical" [(ngModel)]="delayTime" (ngModelChange)="chorusFrequencyChanged($event)" />
+  <input class="slider" step="0.1" min="0" max="1" value="0" type="range" orient="vertical" [(ngModel)]="delayFeedback" (ngModelChange)="chorusDelayChanged($event)" />
+  <input class="slider" step="0.1" min="0" max="1" value="0" type="range" orient="vertical" [(ngModel)]="delayWet" (ngModelChange)="chorusDeptChanged($event)" />
+</div>
