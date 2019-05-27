@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 // import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 
 import { AppComponent } from './app.component';
-import { OscillatorComponent } from './oscillator/oscillator.component';
+import { OscillatorComponent } from './source/oscillator/oscillator.component';
 
 import { TutorialState } from './state/tutorial.state';
 import { OscillatorState } from './state/oscillator.state';

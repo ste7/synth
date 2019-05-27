@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import * as Tone from 'tone';
-import * as Nexus from 'nexusui';
 import { Chorus } from './../effects/chorus/chorus.model';
 import { Delay } from './../effects/delay/delay.model';
-
+import { Oscillator } from './../source/oscillator/oscillator.model';
+import * as Tone from 'tone';
 
 @Component({
   selector: 'app-synth',
@@ -12,10 +11,8 @@ import { Delay } from './../effects/delay/delay.model';
 })
 export class SynthComponent implements OnInit {
   private osc;
+
   private on = false;
-  private type = 'sine';
-  private frequency = 220;
-  private volume = -25;
 
   private delay: Delay;
 
@@ -24,11 +21,17 @@ export class SynthComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    let dist = new Tone.Vibrato(
+      {
+        depth: 5
+      }
+    );
+
     this.delay = Delay.getInstance();
     this.chorus = Chorus.getInstance();
+    this.osc = Oscillator.getInstance();
 
-    this.osc = new Tone.Oscillator(this.frequency, this.type).connect(this.delay).connect(this.chorus);
-    this.osc.volume.value = this.volume;
+    this.osc.connect(dist).connect(this.delay).connect(this.chorus);
 
     let _th = this;
 
@@ -44,19 +47,4 @@ export class SynthComponent implements OnInit {
       }
     }
   }
-
-  // oscTypeChanged(e) {
-  //   this.type = e;
-  //   this.osc.type = this.type;
-  // }
-
-  // onChanged(e) {
-  //   this.on = e;
-  //   this.on === true ? this.osc.start() : this.osc.stop();
-  // }
-
-  // volumeChanged(e) {
-  //   this.osc.volume.value = e;
-  // }
-
 }

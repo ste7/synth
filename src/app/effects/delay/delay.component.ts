@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as Tone from 'tone';
-import * as Nexus from 'nexusui';
 import { Delay } from './delay.model';
 
 @Component({
@@ -18,8 +16,7 @@ export class DelayComponent implements OnInit {
   }
 
   delayTimeChanged(e) {
-    console.log(this.delay.delayTime.value = e);
-    console.log(this.delay);
+    this.delay.delayTime.value = e;
   }
 
   delayFeedbackChanged(e) {
