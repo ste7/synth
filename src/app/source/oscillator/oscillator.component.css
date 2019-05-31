@@ -9,3 +9,43 @@
   height: 100px;
   padding: 0 5px;
 }
+
+
+/* svg {
+  display: block;
+} */
+
+
+.waveforms {
+  display: flex;
+  /* width: 688px; */
+  justify-content: space-between;
+  margin: 8px 0;
+  .waveform {
+    border: 3px solid transparent;
+    cursor: pointer;
+    &.active {
+      border: 3px solid #50B9FF;
+      border-radius: 2px;
+      background-color: #f7f9fb;
+    }
+  }
+}
+
+@keyframes visualize {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-108px);
+  }
+}
+
+.animated {
+  animation: visualize 0.2s linear infinite;
+  animation-play-state: paused;
+}
+
+.playing .active .animated {
+  animation-play-state: running;
+}

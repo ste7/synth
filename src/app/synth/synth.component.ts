@@ -10,6 +10,7 @@ import * as Tone from 'tone';
   styleUrls: ['./synth.component.css']
 })
 export class SynthComponent implements OnInit {
+
   private osc;
 
   private on = false;
@@ -21,30 +22,10 @@ export class SynthComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    let dist = new Tone.Vibrato(
-      {
-        depth: 5
-      }
-    );
-
     this.delay = Delay.getInstance();
     this.chorus = Chorus.getInstance();
     this.osc = Oscillator.getInstance();
 
-    this.osc.connect(dist).connect(this.delay).connect(this.chorus);
-
-    let _th = this;
-
-    document.body.onkeyup = function(e){
-      if(e.keyCode == 32){
-        if (_th.on === true) {
-          _th.on = false;
-          _th.osc.stop();
-        } else {
-          _th.on = true;
-          _th.osc.start();
-        }
-      }
-    }
+    this.osc.connect(this.delay).connect(this.chorus);
   }
 }

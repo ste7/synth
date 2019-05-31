@@ -21,9 +21,11 @@ RemoveOscillator
 
 
 
-
+volume
 pitch
+delay
+chorus
+filter hi
+filter low
 piano
 env
-filter
-distorsion
